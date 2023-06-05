@@ -2,26 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.rotate-object {
+ animation: rotateObject 7s linear infinite alternate;
+}
+
+@keyframes rotateObject {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.svgIcon {
+  width: 40px;
+  fill: blue;
 }
+
+
+.optionColor {
+  background: radial-gradient(#fff, #c0deff);
+  background-repeat: no-repeat;
+}
+
+.OptionColor {
+  background: radial-gradient(#fff, #ffeab4);
+  background-repeat: no-repeat;
+}
+
+.EventsBgImg {
+  background-image: url('/images/bgEvent.png');
+  background-repeat: no-repeat;
+}
+
